@@ -69,3 +69,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.comment {
+    color: #A9A9A9;
+    font-size: 16px;
+    font-style: italic;
+}
