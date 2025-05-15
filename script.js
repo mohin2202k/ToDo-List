@@ -16,7 +16,7 @@ let addTask = function () {
     }
     tasks.push(newTask);
     taskDiv.innerHTML = `<input type="checkbox" class="taskCheck">
-                        <span class="taskText">${newTask}</span>  
+                        <span class="taskText">${newTask.trim()}</span>  
                         <button class="deleteBtn">🗑️</button>`;
     taskList.append(taskDiv);
     let delbtn = taskDiv.querySelector('.deleteBtn');
