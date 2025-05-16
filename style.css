@@ -23,7 +23,7 @@ body {
 .taskDiv {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: 1px solid #E0E0E0;
     padding: 10px 0;
 }
@@ -77,7 +77,8 @@ body {
     justify-content: center;
 }
 
-.comment {
+.comment,
+input::placeholder {
     color: #A9A9A9;
     font-size: 15px;
     font-style: italic;
@@ -91,4 +92,27 @@ body {
     height: 24px;
     width: 24px;
     padding: 6px;
+}
+
+input[type="text"] {
+    background: none;
+    border: none;
+}
+
+input[type="text"]:focus {
+    background: none;
+    border: none;
+    outline: none;
+    text-wrap: break-word;
+}
+
+.takeInpBtn {
+    border: none;
+    background-color: red;
+    color: white;
+    height: 22px;
+    width: 22px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
 }
