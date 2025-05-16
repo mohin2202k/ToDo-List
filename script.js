@@ -17,7 +17,7 @@ let addTask = function () {
     tasks.push(newTask);
     taskDiv.innerHTML = `<input type="checkbox" class="taskCheck">
                         <span class="taskText">${newTask.trim()}</span>  
-                        <button class="deleteBtn">🗑️</button>`;
+                        <button class="deleteBtn"><img src="garbageCan.svg" alt=""></button>`;
     taskList.append(taskDiv);
     let delbtn = taskDiv.querySelector('.deleteBtn');
     addELdel(delbtn);
@@ -29,9 +29,9 @@ let addTask = function () {
 }
 
 let deleteTask = function (e) {
-    let taskDiv = e.target.parentElement;
+    let taskDiv = e.target.parentElement.parentElement;
     taskList.removeChild(taskDiv);
-    tasks.pop(e.target.previousElementSibling.innerText);
+    tasks.pop(e.target.parentElement.previousElementSibling.innerText);
     if (tasks.length === 0) {
         comment.hidden = false;
     } else {
