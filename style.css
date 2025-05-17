@@ -82,6 +82,7 @@ input::placeholder {
     color: #A9A9A9;
     font-size: 15px;
     font-style: italic;
+    font-weight: 400;
 }
 
 .deleteBtn img {
@@ -97,6 +98,8 @@ input::placeholder {
 input[type="text"] {
     background: none;
     border: none;
+    font-family: inherit;
+    font-weight: 600;
 }
 
 input[type="text"]:focus {

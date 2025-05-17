@@ -22,9 +22,9 @@ let addTask = function () {
     let checkbtn = taskDiv.querySelector('.taskCheck');
     addELcheck(checkbtn);
     if (taskNum === 0) {
-        comment.hidden = false;
+        comment.style.display = "block";
     } else {
-        comment.hidden = true;
+        comment.style.display = "none";
     }
 }
 
@@ -33,9 +33,9 @@ let deleteTask = function (e) {
     taskList.removeChild(taskDiv);
     taskNum--;
     if (taskNum === 0) {
-        comment.hidden = false;
+        comment.style.display = "block";
     } else {
-        comment.hidden = true;
+        comment.style.display = "none";
     }
 }
 
