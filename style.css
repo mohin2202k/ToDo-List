@@ -6,19 +6,28 @@
 }
 
 body {
-    background-color: rgb(69, 69, 69);
+    background-color: #01101e;
     font-family: Raleway, 'Segoe UI', Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+h1 {
+    color: #E0E0E0;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .todo-app {
-    background: #FFFFFF;
+    background: #01101e;
     border-radius: 12px;
     padding: 20px 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    max-width: 800px;
+    width: 100%;
 }
 
 .taskList {
@@ -30,12 +39,12 @@ body {
     align-items: center;
     justify-content: space-around;
     border-bottom: 1px solid #E0E0E0;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .taskCheck {
     margin-right: 10px;
-    accent-color: #4CAF50;
+    accent-color: red;
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -43,7 +52,7 @@ body {
 
 .taskText {
     flex-grow: 1;
-    color: #333333;
+    color: #E0E0E0;
     font-size: 19px;
     overflow: hidden;
     font-weight: 600;
@@ -90,7 +99,8 @@ input::placeholder {
     font-weight: 400;
 }
 
-.deleteBtn img {
+.deleteBtn img,
+.editBtn img {
     border: none;
     border-radius: 4px;
     background-color: red;
@@ -129,10 +139,9 @@ input[type="text"]:focus {
     padding: 10px;
     border: 1px solid #E0E0E0;
     border-radius: 4px;
-    color: #333333;
+    color: #E0E0E0;
     display: flex;
     justify-content: space-between;
-    font-size: inherit;
 }
 
 #taskInput {
@@ -140,11 +149,30 @@ input[type="text"]:focus {
     border: none;
     outline: none;
     font-size: 19px;
-    color: #333333;
+    color: #E0E0E0;
 }
 
 input,
 select {
     -webkit-background-clip: text !important;
     background-clip: text !important;
+}
+
+.editBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #E0E0E0;
+    -webkit-box-shadow: 0 0 0 1000px #01101e inset;
+    box-shadow: 0 0 0 1000px #01101e inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill::first-line {
+    font-family: inherit;
+    font-size: 19px;
+    color: #E0E0E0;
 }

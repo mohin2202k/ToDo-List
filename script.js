@@ -18,7 +18,8 @@ let addTask = function () {
     taskNum++;
     taskDiv.innerHTML = `
                 <input type="checkbox" class="taskCheck">
-                <span class="taskText">${taskInput.value}</span>  
+                <span class="taskText">${taskInput.value}</span>
+                <button class="editBtn"><img src="editPencil.svg" alt=""></button>  
                 <button class="deleteBtn"><img src="garbageCan.svg" alt=""></button>
                 `;
     taskList.append(taskDiv);
@@ -31,11 +32,6 @@ let deleteTask = function (e) {
     let taskDiv = e.target.parentElement.parentElement;
     taskList.removeChild(taskDiv);
     taskNum--;
-    if (taskNum === 0) {
-        comment.style.display = "block";
-    } else {
-        comment.style.display = "none";
-    }
 }
 
 
