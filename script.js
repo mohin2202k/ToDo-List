@@ -25,6 +25,8 @@ let addTask = function () {
     taskList.append(taskDiv);
     let delbtn = taskDiv.querySelector('.deleteBtn');
     addELdel(delbtn);
+    let editbtn = taskDiv.querySelector('.editBtn');
+    addELedit(editbtn);
     taskInput.value = "";
 }
 
@@ -34,12 +36,21 @@ let deleteTask = function (e) {
     taskNum--;
 }
 
+let editTask = function (e) {
+    let taskDiv = e.currentTarget.parentElement;
+    let taskText = taskDiv.querySelector('.taskText');
+    let newTaskText = taskText ? prompt("Edit your task:", taskText.textContent) : null;
+    if (newTaskText !== null && newTaskText.trim() !== "") {
+        taskText.textContent = newTaskText;
+    }
+}
 
 addTaskButton.addEventListener('click', addTask);
+
 
 function addELdel(btn) {
     btn.addEventListener('click', deleteTask);
 }
-function addELcheck(btn) {
-    btn.addEventListener('click', disableInput);
+function addELedit(btn) {
+    btn.addEventListener('click', editTask);
 }
