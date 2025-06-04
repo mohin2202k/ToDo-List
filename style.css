@@ -177,7 +177,7 @@ input:-webkit-autofill::first-line {
     color: #E0E0E0;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     .todo-app {
         padding: 0;
         box-shadow: none;
