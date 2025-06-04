@@ -176,3 +176,10 @@ input:-webkit-autofill::first-line {
     font-size: 19px;
     color: #E0E0E0;
 }
+
+@media only screen and (max-width: 500px) {
+    .todo-app {
+        padding: 0;
+        box-shadow: none;
+    }
+}
