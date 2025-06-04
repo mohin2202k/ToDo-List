@@ -26,10 +26,10 @@ let addTask = function () {
                 `;
     taskList.append(taskDiv);
     tasks[taskNum] = [taskInput.value, false];
-    let delbtn = taskDiv.querySelector('.deleteBtn');
-    addELdel(delbtn);
-    let editbtn = taskDiv.querySelector('.editBtn');
-    addELedit(editbtn);
+    let delBtn = taskDiv.querySelector('.deleteBtn');
+    addELdel(delBtn);
+    let editBtn = taskDiv.querySelector('.editBtn');
+    addELedit(editBtn);
     let taskCheck = taskDiv.querySelector('.taskCheck');
     addELcheck(taskCheck);
     taskInput.value = "";
@@ -79,10 +79,10 @@ let taskLoad = function () {
                 <button class="deleteBtn"><img src="garbageCan.svg" alt=""></button>
                 `;
             taskList.append(taskDiv);
-            let delbtn = taskDiv.querySelector('.deleteBtn');
-            addELdel(delbtn);
-            let editbtn = taskDiv.querySelector('.editBtn');
-            addELedit(editbtn);
+            let delBtn = taskDiv.querySelector('.deleteBtn');
+            addELdel(delBtn);
+            let editBtn = taskDiv.querySelector('.editBtn');
+            addELedit(editBtn);
             let taskCheck = taskDiv.querySelector('.taskCheck');
             addELcheck(taskCheck);
         }
