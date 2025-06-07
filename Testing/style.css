@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    background-color: rgb(69, 69, 69);
+    font-family: Raleway, 'Segoe UI', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.todo-app {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+.taskList {
+    margin-top: 20px;
+}
+
+.taskDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 10px 0;
+}
+
+.taskCheck {
+    margin-right: 10px;
+    accent-color: #4CAF50;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+}
+
+.taskText {
+    flex-grow: 1;
+    color: #333333;
+    font-size: 19px;
+    overflow: hidden;
+    font-weight: 600;
+}
+
+
+.taskCheck:checked+.taskText {
+    text-decoration: line-through;
+    color: #A9A9A9;
+}
+
+.deleteBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#addTask {
+    border: none;
+    border-radius: 4px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comment,
+input::placeholder {
+    color: #A9A9A9;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.deleteBtn img {
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    height: 24px;
+    width: 24px;
+    padding: 6px;
+}
+
+input[type="text"] {
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+input[type="text"]:focus {
+    background: none;
+    border: none;
+    outline: none;
+    text-wrap: break-word;
+}
+
+.takeInpBtn {
+    border: none;
+    background-color: red;
+    color: white;
+    height: 22px;
+    width: 22px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.taskInputContainer {
+    padding: 10px;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    font-size: inherit;
+}
+
+#taskInput {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    font-size: 19px;
+    color: #333333;
+}
+
+input,
+select {
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+}

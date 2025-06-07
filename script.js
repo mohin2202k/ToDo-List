@@ -91,6 +91,11 @@ let taskLoad = function () {
 document.addEventListener('DOMContentLoaded', taskLoad);
 
 addTaskButton.addEventListener('click', addTask);
+taskInput.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        addTask();
+    }
+});
 function addELdel(btn) {
     btn.addEventListener('click', deleteTask);
 }
